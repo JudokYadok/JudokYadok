@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_logo_lo"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginVertical="32dp"
+        app:layout_constraintBottom_toTopOf="@id/home_ment_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/home_logo_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/main_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/home_logo_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주독야독"
+            android:textSize="36dp"
+            android:fontFamily="@font/dongle"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="@id/home_logo_iv"
+            app:layout_constraintBottom_toBottomOf="@id/home_logo_iv"
+            app:layout_constraintStart_toEndOf="@id/home_logo_iv"/>
+
+        <ImageView
+            android:id="@+id/home_profile_iv"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ico_profile"
+            app:layout_constraintTop_toTopOf="@id/home_logo_iv"
+            app:layout_constraintBottom_toBottomOf="@id/home_logo_iv"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/home_ment_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🤔 어떤 문제를 풀까요?"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        android:fontFamily="@font/dongle"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/home_logo_lo"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/home_1_btn"
+        android:layout_width="580dp"
+        android:layout_height="200dp"
+        android:background="@drawable/btn_main"
+        android:text="최근 기출 지문을 \n이용한 문제 생성"
+        android:lineSpacingExtra="10dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="45dp"
+        android:fontFamily="@font/dongle"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintTop_toBottomOf="@id/home_ment_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/home_2_btn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/home_2_btn"
+        android:layout_width="580dp"
+        android:layout_height="200dp"
+        android:background="@drawable/btn_main_white"
+        android:text="직접 추가한 지문을 \n이용한 문제 생성"
+        android:lineSpacingExtra="10dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="45dp"
+        android:fontFamily="@font/dongle"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintTop_toBottomOf="@id/home_ment_tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/home_1_btn"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

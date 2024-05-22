@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/feedback_back_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ico_left_arrow"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintTop_toTopOf="@id/feedback_tv"
+        app:layout_constraintBottom_toBottomOf="@id/feedback_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/feedback_tv"/>
+
+    <TextView
+        android:id="@+id/feedback_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="피드백 및 건의사항"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nanumsquareneo_bold"
+        android:textSize="40dp"
+        app:layout_constraintVertical_bias="0.07"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/feedback_lo"
+        android:layout_width="850dp"
+        android:layout_height="500dp"
+        android:background="@drawable/et_white"
+        app:layout_constraintTop_toBottomOf="@id/feedback_back_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/feedback_write_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="피드백 작성"
+            android:textSize="28dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/nanumsquareneo_bold"
+            app:layout_constraintBottom_toTopOf="@id/feedback_write_view"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:id="@+id/feedback_write_view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/feedback_write_tv"
+            app:layout_constraintEnd_toEndOf="@id/feedback_write_tv"
+            app:layout_constraintTop_toBottomOf="@id/feedback_write_tv"/>
+
+        <EditText
+            android:id="@+id/feedback_write_et"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/et_main"
+            android:layout_marginTop="20dp"
+            android:hint="피드백을 작성해주세요."
+            android:padding="20dp"
+            android:gravity="start"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:fontFamily="@font/nanumsquareneo_regular"
+            app:layout_constraintTop_toBottomOf="@id/feedback_write_view"
+            app:layout_constraintStart_toStartOf="@id/feedback_write_view"
+            app:layout_constraintEnd_toEndOf="@id/feedback_write_view"
+            app:layout_constraintBottom_toTopOf="@id/feedback_write_yes_btn"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/feedback_write_yes_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginStart="200dp"
+            android:background="@drawable/btn_main"
+            android:fontFamily="@font/nanumsquareneo_bold"
+            android:gravity="center"
+            android:paddingHorizontal="100dp"
+            android:layout_marginEnd="50dp"
+            android:text="작성"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@id/feedback_write_no_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/feedback_write_et" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/feedback_write_no_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:layout_marginEnd="200dp"
+            android:background="@drawable/btn_main"
+            android:fontFamily="@font/nanumsquareneo_bold"
+            android:gravity="center"
+            android:paddingHorizontal="100dp"
+            android:layout_marginStart="50dp"
+            android:text="취소"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/feedback_write_yes_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/feedback_write_yes_btn"
+            app:layout_constraintTop_toTopOf="@id/feedback_write_yes_btn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

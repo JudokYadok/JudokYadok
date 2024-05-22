@@ -1,0 +1,28 @@
+[llm/end] [1:RunTypeEnum.chain:AgentExecutor > 10:RunTypeEnum.tool:Calculator > 11:RunTypeEnum.chain:LLMMathChain > 12:RunTypeEnum.chain:LLMChain > 13:RunTypeEnum.llm:ChatOpenAI] [2.89s] Exiting LLM run with output:
+    {
+      "generations": [
+        [
+          {
+            "text": "```text\n52*365\n```\n...numexpr.evaluate(\"52*365\")...\n",
+            "generation_info": {
+              "finish_reason": "stop"
+            },
+            "message": {
+              "lc": 1,
+              "type": "constructor",
+              "id": [
+                "langchain",
+                "prompt",
+                "chat",
+                "ChatPromptValue"
+              ],
+              "kwargs": {
+                "content": "```text\n52*365\n```\n...numexpr.evaluate(\"52*365\")...\n",
+                "additional_kwargs": {}
+              },
+              "model_name" : "gpt-4-1106-preview"
+            }
+          }
+        ]
+      ]
+    }

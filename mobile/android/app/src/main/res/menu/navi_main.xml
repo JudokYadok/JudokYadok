@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navi_save"
+        android:title="보관"
+        android:icon="@drawable/ico_file"/>
+
+    <item
+        android:id="@+id/navi_home"
+        android:title="학습"
+        android:icon="@drawable/ico_quiz" />
+
+    <item
+        android:id="@+id/navi_setting"
+        android:title="설정"
+        android:icon="@drawable/ico_setting"/>
+</menu>

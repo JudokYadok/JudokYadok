@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/logo.png" sizes="16x16" type="image/png">
+    <title>주독야독</title>
+    <style>
+        #nav {
+            background-color: rgba(253, 187, 187, 0.4);
+            width: 300px;
+            height: 100%;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #section {
+            max-width: calc(100% - 340px);
+            /* 화면 전체 너비에서 왼쪽 네비게이션 바의 너비를 뺀 값 */
+            height: 500px;
+            text-align: center;
+            margin-top: 15px;
+            flex: 1;
+            margin-left: 20%;
+        }
+
+        li {
+            list-style-type: none;
+            margin: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        @font-face {
+            font-family: 'dongle';
+            src: local('dongle'), url('/Users/parkhyejeong/Documents/font/dongle.ttf') format('ttf');
+        }
+
+        body {
+            font-family: 'dongle', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="width: 100%; height: 30%; background-color: rgba(244, 244, 244, 0.5); padding-top: 10px; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; align-items: center;">
+            <img src="/images/logo.png" alt="주독야독" width="50dp" height="50dp" style="margin-right: 10px;">
+            <a class="navbar-brand" href="/admin/"
+                style="text-decoration-line: none; color: black; font-size: 36px; font-weight: bold;"
+                onmouseover="this.style.color='gray';" onmouseout="this.style.color='black';">주독야독</a>
+            <span style="margin: 0 30px;"></span>
+
+            <a class="navbar-brand" href="/admin/users"
+                style="text-decoration-line: none; color: gray; font-size: 18px; font-weight: bold;"
+                onmouseover="this.style.color='black'; this.style.textDecoration='underline'; this.style.textDecorationColor='#FDBBBB';"
+                onmouseout="this.style.color='gray'; this.style.textDecoration='none';"
+                onfocus="this.style.textDecoration='underline';" onblur="this.style.textDecoration='none';">회원관리</a>
+            <span style="margin: 0 10px;"></span>
+            <a class="navbar-brand" href="/admin/text"
+                style="text-decoration-line: none; color: gray; font-size: 18px; font-weight: bold;"
+                onmouseover="this.style.color='black'; this.style.textDecoration='underline'; this.style.textDecorationColor='#FDBBBB';"
+                onmouseout="this.style.color='gray'; this.style.textDecoration='none';"
+                onfocus="this.style.textDecoration='underline';" onblur="this.style.textDecoration='none';">지문관리</a>
+            <span style="margin: 0 10px;"></span>
+            <a class="navbar-brand" href="/admin/feedback"
+                style="text-decoration-line: none; color: black; font-size: 18px; font-weight: bold; text-decoration: underline; text-decoration-color: #FDBBBB;"
+                onmouseover="this.style.color='black'; this.style.textDecoration='none';"
+                onmouseout="this.style.color='black'; this.style.textDecoration='underline'; this.style.textDecorationColor='#FDBBBB';"
+                onfocus="this.style.textDecoration='none';" onblur="this.style.textDecoration='underline';">피드백 관리</a>
+            <span style="margin: 0 10px;"></span>
+            <a class="navbar-brand" href="/admin/ai"
+                style="text-decoration-line: none; color: gray; font-size: 18px; font-weight: bold;"
+                onmouseover="this.style.color='black'; this.style.textDecoration='underline'; this.style.textDecorationColor='#FDBBBB';"
+                onmouseout="this.style.color='gray'; this.style.textDecoration='none';"
+                onfocus="this.style.textDecoration='underline';" onblur="this.style.textDecoration='none';">AI 관리</a>
+            <span style="margin: 0 30px;"></span>
+        </div>
+
+        <button onclick="window.location.href = '/admin/logout';"
+            style="border-style: solid; font-size: 20px; font-weight: bold; background-color: white; border-width: 2px; border-color: black; border-radius: 30px; width: 111px; height: 45px; margin-right: 10px;"
+            onmouseover="this.style.backgroundColor='#FDBBBB'; this.style.color='black';"
+            onmouseout="this.style.backgroundColor='white'; this.style.color='black';">로그아웃</button>
+    </div>
+
+    <div id="nav">
+        <ul style="padding: 0; height: 90vh; overflow-y: auto;">
+            <% for (var i=0; i < user_list.length; i++) { %>
+                <li>
+                    <a style="text-decoration-line: none; color: gray; font-size: 25px; font-weight: bold;"
+                        onmouseover="this.style.color='black'; this.style.textDecoration='underline'; this.style.textDecorationColor='#FDBBBB'; this.style.textDecoration='none';"
+                        onmouseout="this.style.color='gray'; this.style.textDecoration='none';"
+                        onfocus="this.style.textDecoration='none';"
+                        onblur="this.style.textDecoration='underline'; this.style.textDecorationColor='#FDBBBB';"
+                        class="dropdown-item" href="/admin/feedback/<%= user_list[i].user_id %>">
+                        <%= user_list[i].name %>
+                    </a>
+                </li>
+                <% } %>
+        </ul>
+    </div>
+
+    <div id="section">
+        <p style="font-size: 40px; font-weight: bold;"> 조회할 사용자를 골라주세요. </p>
+    </div>
+
+    </span>
+</body>
+
+</html>

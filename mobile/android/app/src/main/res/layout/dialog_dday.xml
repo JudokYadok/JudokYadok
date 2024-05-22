@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="200dp"
+    android:layout_marginVertical="250dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="50dp"
+        android:paddingHorizontal="50dp"
+        android:backgroundTint="@color/yellow_pink"
+        android:background="@drawable/btn_main">
+
+        <TextView
+            android:id="@+id/dialog_dday_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수능 d-day"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nanumsquareneo_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dialog_dday_lo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/dialog_dday_yes_btn"
+            app:layout_constraintTop_toBottomOf="@id/dialog_dday_tv">
+
+            <EditText
+                android:id="@+id/dialog_dday_year_et"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:background="@drawable/et_white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="2024"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/dialog_dday_year_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="년"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                android:gravity="center"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@id/dialog_dday_year_et"
+                app:layout_constraintBottom_toBottomOf="@id/dialog_dday_year_et"
+                app:layout_constraintStart_toEndOf="@id/dialog_dday_year_et"/>
+
+            <EditText
+                android:id="@+id/dialog_dday_month_et"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:background="@drawable/et_white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="4"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                android:layout_marginStart="30dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/dialog_dday_year_tv"/>
+
+            <TextView
+                android:id="@+id/dialog_dday_month_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="월"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                android:gravity="center"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@id/dialog_dday_year_et"
+                app:layout_constraintBottom_toBottomOf="@id/dialog_dday_year_et"
+                app:layout_constraintStart_toEndOf="@id/dialog_dday_month_et"/>
+
+            <EditText
+                android:id="@+id/dialog_dday_date_et"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:background="@drawable/et_white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="24"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                android:layout_marginStart="30dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/dialog_dday_month_tv"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="일"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                android:gravity="center"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@id/dialog_dday_year_et"
+                app:layout_constraintBottom_toBottomOf="@id/dialog_dday_year_et"
+                app:layout_constraintStart_toEndOf="@id/dialog_dday_date_et"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dialog_dday_yes_btn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_main"
+            android:text="YES"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:fontFamily="@font/nanumsquareneo_bold"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toStartOf="@id/dialog_dday_no_btn"
+            app:layout_constraintTop_toBottomOf="@id/dialog_dday_lo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dialog_dday_no_btn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_main"
+            android:text="NO"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:fontFamily="@font/nanumsquareneo_bold"
+            app:layout_constraintStart_toEndOf="@id/dialog_dday_yes_btn"
+            app:layout_constraintTop_toTopOf="@id/dialog_dday_yes_btn"
+            app:layout_constraintBottom_toBottomOf="@id/dialog_dday_yes_btn"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

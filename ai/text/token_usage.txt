@@ -1,0 +1,5 @@
+Tokens Used: 3561
+	Prompt Tokens: 2348
+	Completion Tokens: 1213
+Successful Requests: 1
+Total Cost (USD): $0.14322

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/mypage_back_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ico_left_arrow"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintTop_toTopOf="@id/mypage_tv"
+        app:layout_constraintBottom_toBottomOf="@id/mypage_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/mypage_tv"/>
+
+    <TextView
+        android:id="@+id/mypage_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="마이 페이지"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nanumsquareneo_bold"
+        android:textSize="40dp"
+        app:layout_constraintVertical_bias="0.07"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/mypage_profile_iv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ico_profile"
+        android:layout_marginHorizontal="250dp"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintTop_toBottomOf="@id/mypage_back_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mypage_info_lo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintStart_toEndOf="@id/mypage_profile_iv"
+        app:layout_constraintTop_toBottomOf="@id/mypage_back_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        
+        <EditText
+            android:id="@+id/mypage_nickname_et"
+            android:layout_width="500dp"
+            android:layout_height="60dp"
+            android:drawableStart="@drawable/ico_person"
+            android:padding="20dp"
+            android:drawablePadding="10dp"
+            android:text="김감자"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/nanumsquareneo_bold"
+            android:background="@drawable/et_main"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/mypage_email_et"
+            android:layout_width="500dp"
+            android:layout_height="60dp"
+            android:drawableStart="@drawable/ico_mail"
+            android:padding="20dp"
+            android:drawablePadding="10dp"
+            android:text="gamza@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/nanumsquareneo_bold"
+            android:background="@drawable/et_main"
+            android:layout_marginVertical="50dp"
+            app:layout_constraintTop_toBottomOf="@id/mypage_nickname_et"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/mypage_join_tv"
+            android:layout_width="500dp"
+            android:layout_height="60dp"
+            android:drawableStart="@drawable/ico_calendar"
+            android:padding="20dp"
+            android:drawablePadding="10dp"
+            android:text="2024년 5월 12일"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/nanumsquareneo_bold"
+            android:background="@drawable/et_main"
+            android:layout_marginVertical="50dp"
+            app:layout_constraintTop_toBottomOf="@id/mypage_email_et"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mypage_calendar_lo"
+            android:layout_width="500dp"
+            android:layout_height="60dp"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/nanumsquareneo_bold"
+            android:background="@drawable/et_main"
+            android:layout_marginVertical="50dp"
+            app:layout_constraintTop_toBottomOf="@id/mypage_join_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/mypage_calendar_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D - "
+                android:paddingVertical="20dp"
+                android:paddingStart="20dp"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/mypage_calendar_et"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="90"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                app:layout_constraintTop_toTopOf="@id/mypage_calendar_tv"
+                app:layout_constraintBottom_toBottomOf="@id/mypage_calendar_tv"
+                app:layout_constraintStart_toEndOf="@id/mypage_calendar_tv"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mypage_calendar_add_lo"
+            android:layout_width="500dp"
+            android:layout_height="60dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/nanumsquareneo_bold"
+            android:background="@drawable/et_main"
+            android:layout_marginVertical="30dp"
+            android:visibility="gone"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/mypage_calendar_lo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <EditText
+                android:id="@+id/mypage_calendar_add_year_et"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:background="@drawable/et_white"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                android:layout_marginStart="40dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/mypage_calendar_add_year_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="년"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mypage_calendar_add_year_et"/>
+
+            <EditText
+                android:id="@+id/mypage_calendar_add_month_et"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:background="@drawable/et_white"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                android:layout_marginStart="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mypage_calendar_add_year_tv"/>
+
+            <TextView
+                android:id="@+id/mypage_calendar_add_month_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="월"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mypage_calendar_add_month_et"/>
+
+            <EditText
+                android:id="@+id/mypage_calendar_add_date_et"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:background="@drawable/et_white"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                android:layout_marginStart="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mypage_calendar_add_month_tv"/>
+
+            <TextView
+                android:id="@+id/mypage_calendar_add_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                android:layout_marginStart="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mypage_calendar_add_date_et"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/mypage_modify_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_marginStart="200dp"
+        android:background="@drawable/btn_main"
+        android:fontFamily="@font/nanumsquareneo_bold"
+        android:gravity="center"
+        android:paddingHorizontal="150dp"
+        android:text="수정"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@id/mypage_delete_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mypage_info_lo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/mypage_delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_marginEnd="200dp"
+        android:background="@drawable/btn_main"
+        android:fontFamily="@font/nanumsquareneo_bold"
+        android:gravity="center"
+        android:paddingHorizontal="150dp"
+        android:text="탈퇴"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mypage_modify_btn"
+        app:layout_constraintTop_toBottomOf="@id/mypage_info_lo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

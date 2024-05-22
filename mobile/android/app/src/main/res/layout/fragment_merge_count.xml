@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/merge_count_back_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ico_left_arrow"
+        android:layout_marginStart="70dp"
+        app:layout_constraintTop_toTopOf="@id/merge_count_tv"
+        app:layout_constraintBottom_toBottomOf="@id/merge_count_tv"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/merge_count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="지문 이름"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nanumsquareneo_bold"
+        android:textSize="40dp"
+        app:layout_constraintVertical_bias="0.07"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/merge_count_back_btn"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/merge_count_lo"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="45dp"
+            android:background="@drawable/et_white"
+            android:paddingVertical="20dp"
+            app:layout_constraintBottom_toTopOf="@id/merge_count_btn"
+            app:layout_constraintTop_toBottomOf="@id/merge_count_tv">
+
+            <TextView
+                android:id="@+id/merge_count_lo_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="문제 조합 선택"
+                android:textSize="28dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                app:layout_constraintBottom_toTopOf="@id/merge_count_view"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <View
+                android:id="@+id/merge_count_view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/merge_count_lo_tv"
+                app:layout_constraintEnd_toEndOf="@id/merge_count_lo_tv"
+                app:layout_constraintTop_toBottomOf="@id/merge_count_lo_tv"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/merge_count_type1_lo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/et_main"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                app:layout_constraintTop_toBottomOf="@id/merge_count_view">
+
+                <TextView
+                    android:id="@+id/merge_count_type1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="내용 일치"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nanumsquareneo_bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/merge_count_type1_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_omr"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/merge_count_type2_lo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="30dp"
+                android:background="@drawable/et_main"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                app:layout_constraintTop_toBottomOf="@id/merge_count_type1_lo">
+
+                <TextView
+                    android:id="@+id/merge_count_type2_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="내용 전개 방식"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nanumsquareneo_bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/merge_count_type2_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_omr"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/merge_count_type3_lo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="30dp"
+                android:background="@drawable/et_main"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                app:layout_constraintTop_toBottomOf="@id/merge_count_type2_lo">
+
+                <TextView
+                    android:id="@+id/merge_count_type3_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="내용 이해"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nanumsquareneo_bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/merge_count_type3_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_omr"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/merge_count_type4_lo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="30dp"
+                android:background="@drawable/et_main"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                app:layout_constraintTop_toBottomOf="@id/merge_count_type3_lo">
+
+                <TextView
+                    android:id="@+id/merge_count_type4_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="대상 비교"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nanumsquareneo_bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/merge_count_type4_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_omr"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/merge_count2_view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintStart_toStartOf="@id/merge_count_lo_tv"
+                app:layout_constraintEnd_toEndOf="@id/merge_count_lo_tv"
+                app:layout_constraintBottom_toTopOf="@id/merge_count_type5_lo"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/merge_count_type5_lo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="30dp"
+                android:background="@drawable/et_main"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/merge_count_type5_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="모든 유형 선택"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nanumsquareneo_bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/merge_count_type5_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_omr"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/merge_count_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_main"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="문제 생성"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nanumsquareneo_bold"
+        android:layout_marginHorizontal="300dp"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/merge_count_lo"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

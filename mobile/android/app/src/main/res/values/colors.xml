@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 로그인 -->
+    <color name="kakao">#F9E000</color>
+    <color name="kakao_text">#624A3D</color>
+
+    <color name="light_gray">#F0F0F0</color>
+    <color name="error_red">#FF0000</color>
+    <color name="white_gray">#F5F5F5</color>
+    <color name="gray">#898989</color>
+    <color name="transparent">#00ff0000</color>
+
+    <color name="main_pink">#FDBBBB</color>
+    <color name="dark_pink">#DE9999</color>
+    <color name="white_pink">#66FDBBBB</color>
+    <color name="yellow_pink">#F6ECE8</color>
+    <color name="pink">#FAF0F0</color>
+    <color name="blue">#0047FF</color>
+
+    <color name="green">#5EB948</color>
+</resources>

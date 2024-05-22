@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/problem_back_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ico_left_arrow"
+        android:layout_marginStart="70dp"
+        app:layout_constraintTop_toTopOf="@id/problem_tv"
+        app:layout_constraintBottom_toBottomOf="@id/problem_tv"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/problem_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="지문 이름"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nanumsquareneo_bold"
+        android:textSize="40dp"
+        app:layout_constraintVertical_bias="0.07"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/problem_back_btn"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ScrollView
+        android:id="@+id/problem_quiz_sv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/problem_media_lo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/problem_tv"
+        app:layout_constraintVertical_bias="0.02">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/problem_contents_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:padding="15dp"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="8dp"
+                android:fontFamily="@font/nanumsquareneo_regular"
+                android:text=" 사람은 살아가는 동안 여러 약속을 한다. 계약도 하나의 약속 이다. 하지만 이것은 친구와 뜻이 맞아 주말에 영화 보러 가자는 약속과는 다르다. 일반적인 다른 약속처럼 계약도 서로의 의사 표시가 합치하여 성립하지만, 이때의 의사는 일정한 법률 효과의 발생을 목적으로 한다는 점에서 차이가 있다. 한 예로 매매 계약 은 ‘팔겠다’는 일방의 의사 표시와 ‘사겠다’는 상대방의 의사 표시가 합치함으로써 성립하며, 매도인은 매수인에게 매매 목적물 의 소유권을 이전하여야 할 의무를 짐과 동시에 매매 대금의 지급을 청구할 권리를 갖는다. 반대로 매수인은 매도인에게 매매 대금을 지급할 의무가 있고 소유권의 이전을 청구할 권리를 갖는다. 양 당사자는 서로 권리를 행사하고 서로 의무를 이행 하는 관계에 놓이는 것이다.
+ 이처럼 의사 표시를 필수적 요소로 하여 법률 효과를 발생시 키는 행위들을 법률 행위라 한다. 계약은 법률 행위의 일종으 로서, 당사자에게 일정한 청구권과 이행 의무를 발생시킨다. 청구권을 내용으로 하는 권리가 채권이고, 그에 따라 이행을 해야 할 의무가 채무이다. 따라서 채권과 채무는 발생한 법률 효과가 동전의 양면처럼 서로 다른 방향에서 파악되는 것이라 할 수 있다. 채무자가 채무의 내용대로 이행하여 채권을 소멸시 키는 것을 변제라 한다.
+ 갑과 을은 을이 소유한 그림 A를 갑에게 매도하는 것을 내용 으로 하는 매매 계약을 체결하였다. ㉠ 을의 채무는 그림 A의 소유권을 갑에게 이전하는 것이다. 동산인 물건의 소유권을 이전 하는 방식은 그 물건을 인도하는 것이다. 갑은 그림 A가 너무나 마음에 들었기 때문에 그것을 인도받기 전에 대금 전액을 금전 으로 지급하였다. 그런데 갑이 아무리 그림 A를 넘겨달라고 청구 하여도 을은 인도해 주지 않았다. 이런 경우 갑이 사적으로 물리력 을 행사하여 해결하는 것은 엄격히 금지된다.
+ 채권의 내용은 민법과 같은 실체법에서 규정하고 있고, 그것 을 강제적으로 실현할 수 있도록 민사 소송법이나 민사 집행법 같은 절차법이 갖추어져 있다. "
+                android:background="@drawable/et_white"
+                android:backgroundTint="@color/yellow_pink"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/problem_quiz1_lo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_white"
+                android:padding="30dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/problem_contents_tv"
+                app:layout_constraintStart_toStartOf="@id/problem_contents_tv"
+                app:layout_constraintEnd_toEndOf="@id/problem_contents_tv">
+
+                <TextView
+                    android:id="@+id/problem_quiz1_1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_bold"
+                    android:text="1. "
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/problem_quiz1_1_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_bold"
+                    android:text="트러스 구조의 기본 형태는 무엇인가요?"
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintStart_toEndOf="@id/problem_quiz1_1_tv"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/problem_quiz1_1_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_regular"
+                    android:text="(1) 과학 기술의 발전이 사회에 미친 영향을 사례별로 분석하며 그 결과를 평가하고 있다."
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/problem_quiz1_1_tv"
+                    app:layout_constraintTop_toBottomOf="@id/problem_quiz1_1_title_tv" />
+
+                <TextView
+                    android:id="@+id/problem_quiz1_2_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_regular"
+                    android:text="(2) 사각형"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/problem_quiz1_1_tv"
+                    app:layout_constraintTop_toBottomOf="@id/problem_quiz1_1_text_tv" />
+
+                <TextView
+                    android:id="@+id/problem_quiz1_3_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_regular"
+                    android:text="(3) 삼각형"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/problem_quiz1_1_tv"
+                    app:layout_constraintTop_toBottomOf="@id/problem_quiz1_2_text_tv" />
+
+                <TextView
+                    android:id="@+id/problem_quiz1_4_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_regular"
+                    android:text="(4) 원쁠형"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/problem_quiz1_1_tv"
+                    app:layout_constraintTop_toBottomOf="@id/problem_quiz1_3_text_tv" />
+
+                <TextView
+                    android:id="@+id/problem_quiz1_5_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_regular"
+                    android:text="(5) 직사형"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/problem_quiz1_1_tv"
+                    app:layout_constraintTop_toBottomOf="@id/problem_quiz1_4_text_tv" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/problem_quiz2_lo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_white"
+                android:padding="30dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/problem_quiz1_lo"
+                app:layout_constraintStart_toStartOf="@id/problem_contents_tv"
+                app:layout_constraintEnd_toEndOf="@id/problem_contents_tv">
+
+                <TextView
+                    android:id="@+id/problem_quiz2_2_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_bold"
+                    android:text="2. "
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/problem_quiz2_2_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_bold"
+                    android:text="트러스 구조의 기본 형태는 무엇인가요?"
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintStart_toEndOf="@id/problem_quiz2_2_tv"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/problem_quiz2_1_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_regular"
+                    android:text="(1) 원형"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/problem_quiz2_2_tv"
+                    app:layout_constraintTop_toBottomOf="@id/problem_quiz2_2_title_tv" />
+
+                <TextView
+                    android:id="@+id/problem_quiz2_2_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_regular"
+                    android:text="(2) 사각형"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/problem_quiz2_2_tv"
+                    app:layout_constraintTop_toBottomOf="@id/problem_quiz2_1_text_tv" />
+
+                <TextView
+                    android:id="@+id/problem_quiz2_3_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_regular"
+                    android:text="(3) 삼각형"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/problem_quiz2_2_tv"
+                    app:layout_constraintTop_toBottomOf="@id/problem_quiz2_2_text_tv" />
+
+                <TextView
+                    android:id="@+id/problem_quiz2_4_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_regular"
+                    android:text="(4) 원쁠형"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/problem_quiz2_2_tv"
+                    app:layout_constraintTop_toBottomOf="@id/problem_quiz2_3_text_tv" />
+
+                <TextView
+                    android:id="@+id/problem_quiz2_5_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_regular"
+                    android:text="(5) 직사각형"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/problem_quiz2_2_tv"
+                    app:layout_constraintTop_toBottomOf="@id/problem_quiz2_4_text_tv" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/problem_quiz3_lo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_white"
+                android:padding="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="130dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/problem_quiz2_lo"
+                app:layout_constraintStart_toStartOf="@id/problem_contents_tv"
+                app:layout_constraintEnd_toEndOf="@id/problem_contents_tv">
+
+                <TextView
+                    android:id="@+id/problem_quiz3_3_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_bold"
+                    android:text="3. "
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/problem_quiz3_3_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_bold"
+                    android:text="트러스 구조의 기본 형태는 무엇인가요?"
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintStart_toEndOf="@id/problem_quiz3_3_tv"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/problem_quiz3_1_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_regular"
+                    android:text="(1) 원형"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/problem_quiz3_3_tv"
+                    app:layout_constraintTop_toBottomOf="@id/problem_quiz3_3_title_tv" />
+
+                <TextView
+                    android:id="@+id/problem_quiz3_2_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_regular"
+                    android:text="(2) 사각형"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/problem_quiz3_3_tv"
+                    app:layout_constraintTop_toBottomOf="@id/problem_quiz3_1_text_tv" />
+
+                <TextView
+                    android:id="@+id/problem_quiz3_3_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_regular"
+                    android:text="(3) 삼각형"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/problem_quiz3_3_tv"
+                    app:layout_constraintTop_toBottomOf="@id/problem_quiz3_2_text_tv" />
+
+                <TextView
+                    android:id="@+id/problem_quiz3_4_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_regular"
+                    android:text="(4) 원쁠형"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/problem_quiz3_3_tv"
+                    app:layout_constraintTop_toBottomOf="@id/problem_quiz3_3_text_tv" />
+
+                <TextView
+                    android:id="@+id/problem_quiz3_5_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareneo_regular"
+                    android:text="(5) 직사각형"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintHorizontal_bias="0.01"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/problem_quiz3_3_tv"
+                    app:layout_constraintTop_toBottomOf="@id/problem_quiz3_4_text_tv" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/problem_media_lo"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="35dp"
+        android:background="@drawable/et_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/problem_quiz_sv"
+        app:layout_constraintTop_toTopOf="@id/problem_quiz_sv">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/problem_play_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="45dp"
+            android:background="@drawable/ico_play"
+            android:backgroundTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/problem_stop_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="50dp"
+            android:background="@drawable/ico_stop"
+            android:backgroundTint="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/problem_media_tv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/problem_tempo_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="45dp"
+            android:background="@drawable/ico_tempo"
+            android:backgroundTint="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Chronometer
+            android:id="@+id/problem_media_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/dongle"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/problem_omr_lo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/et_white"
+        android:paddingBottom="30dp"
+        app:layout_constraintEnd_toEndOf="@id/problem_media_lo"
+        app:layout_constraintStart_toStartOf="@id/problem_media_lo"
+        app:layout_constraintTop_toBottomOf="@id/problem_media_lo">
+
+        <TextView
+            android:id="@+id/problem_omr_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:fontFamily="@font/nanumsquareneo_bold"
+            android:gravity="center"
+            android:text="답안지"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/problem_omr_view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="@id/problem_omr_tv"
+            app:layout_constraintStart_toStartOf="@id/problem_omr_tv"
+            app:layout_constraintTop_toBottomOf="@id/problem_omr_tv" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/problem_omr1_lo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/lo_omr"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/problem_omr_view">
+
+            <TextView
+                android:id="@+id/problem_omr1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                android:paddingHorizontal="2dp"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/problem_omr1_1btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:background="@drawable/btn_omr"
+                app:layout_constraintBottom_toBottomOf="@id/problem_omr1_tv"
+                app:layout_constraintStart_toEndOf="@id/problem_omr1_tv"
+                app:layout_constraintTop_toTopOf="@id/problem_omr1_tv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/problem_omr1_2btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:background="@drawable/btn_omr"
+                app:layout_constraintBottom_toBottomOf="@id/problem_omr1_tv"
+                app:layout_constraintStart_toEndOf="@id/problem_omr1_1btn"
+                app:layout_constraintTop_toTopOf="@id/problem_omr1_tv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/problem_omr1_3btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:background="@drawable/btn_omr"
+                app:layout_constraintBottom_toBottomOf="@id/problem_omr1_tv"
+                app:layout_constraintStart_toEndOf="@id/problem_omr1_2btn"
+                app:layout_constraintTop_toTopOf="@id/problem_omr1_tv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/problem_omr1_4btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:background="@drawable/btn_omr"
+                app:layout_constraintBottom_toBottomOf="@id/problem_omr1_tv"
+                app:layout_constraintStart_toEndOf="@id/problem_omr1_3btn"
+                app:layout_constraintTop_toTopOf="@id/problem_omr1_tv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/problem_omr1_5btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:background="@drawable/btn_omr"
+                app:layout_constraintBottom_toBottomOf="@id/problem_omr1_tv"
+                app:layout_constraintStart_toEndOf="@id/problem_omr1_4btn"
+                app:layout_constraintTop_toTopOf="@id/problem_omr1_tv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/problem_omr2_lo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/lo_omr"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/problem_omr1_lo">
+
+            <TextView
+                android:id="@+id/problem_omr2_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                android:text="2"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/problem_omr2_1btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:background="@drawable/btn_omr"
+                app:layout_constraintBottom_toBottomOf="@id/problem_omr2_tv"
+                app:layout_constraintStart_toEndOf="@id/problem_omr2_tv"
+                app:layout_constraintTop_toTopOf="@id/problem_omr2_tv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/problem_omr2_2btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:background="@drawable/btn_omr"
+                app:layout_constraintBottom_toBottomOf="@id/problem_omr2_tv"
+                app:layout_constraintStart_toEndOf="@id/problem_omr2_1btn"
+                app:layout_constraintTop_toTopOf="@id/problem_omr2_tv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/problem_omr2_3btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:background="@drawable/btn_omr"
+                app:layout_constraintBottom_toBottomOf="@id/problem_omr2_tv"
+                app:layout_constraintStart_toEndOf="@id/problem_omr2_2btn"
+                app:layout_constraintTop_toTopOf="@id/problem_omr2_tv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/problem_omr2_4btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:background="@drawable/btn_omr"
+                app:layout_constraintBottom_toBottomOf="@id/problem_omr2_tv"
+                app:layout_constraintStart_toEndOf="@id/problem_omr2_3btn"
+                app:layout_constraintTop_toTopOf="@id/problem_omr2_tv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/problem_omr2_5btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:background="@drawable/btn_omr"
+                app:layout_constraintBottom_toBottomOf="@id/problem_omr2_tv"
+                app:layout_constraintStart_toEndOf="@id/problem_omr2_4btn"
+                app:layout_constraintTop_toTopOf="@id/problem_omr2_tv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/problem_omr3_lo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/lo_omr"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/problem_omr2_lo">
+
+            <TextView
+                android:id="@+id/problem_omr3_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquareneo_bold"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/problem_omr3_1btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:background="@drawable/btn_omr"
+                app:layout_constraintBottom_toBottomOf="@id/problem_omr3_tv"
+                app:layout_constraintStart_toEndOf="@id/problem_omr3_tv"
+                app:layout_constraintTop_toTopOf="@id/problem_omr3_tv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/problem_omr3_2btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:background="@drawable/btn_omr"
+                app:layout_constraintBottom_toBottomOf="@id/problem_omr3_tv"
+                app:layout_constraintStart_toEndOf="@id/problem_omr3_1btn"
+                app:layout_constraintTop_toTopOf="@id/problem_omr3_tv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/problem_omr3_3btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:background="@drawable/btn_omr"
+                app:layout_constraintBottom_toBottomOf="@id/problem_omr3_tv"
+                app:layout_constraintStart_toEndOf="@id/problem_omr3_2btn"
+                app:layout_constraintTop_toTopOf="@id/problem_omr3_tv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/problem_omr3_4btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:background="@drawable/btn_omr"
+                app:layout_constraintBottom_toBottomOf="@id/problem_omr3_tv"
+                app:layout_constraintStart_toEndOf="@id/problem_omr3_3btn"
+                app:layout_constraintTop_toTopOf="@id/problem_omr3_tv" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/problem_omr3_5btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="35dp"
+                android:background="@drawable/btn_omr"
+                app:layout_constraintBottom_toBottomOf="@id/problem_omr3_tv"
+                app:layout_constraintStart_toEndOf="@id/problem_omr3_4btn"
+                app:layout_constraintTop_toTopOf="@id/problem_omr3_tv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/problem_check_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/btn_main"
+        android:fontFamily="@font/nanumsquareneo_bold"
+        android:gravity="center"
+        android:text="채점하기"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="@id/problem_omr_lo"
+        app:layout_constraintStart_toStartOf="@id/problem_omr_lo"
+        app:layout_constraintTop_toBottomOf="@id/problem_omr_lo" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/problem_memo_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ico_add"
+        app:tint="@color/white"
+        app:maxImageSize="35dp"
+        app:backgroundTint="@color/main_pink"
+        app:fabCustomSize="@dimen/design_fab_image_size"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerCircle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="8dp"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintTop_toBottomOf="@id/problem_check_btn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/logo.png" sizes="16x16" type="image/png">
+    <title>주독야독</title>
+    <style>
+        input[type="name"] {
+            margin-left: 30px;
+            border: none;
+            /* 기본 테두리 스타일 */
+            background-color: #F5F5F5;
+            padding: 8px;
+            transition: border-color 0.3s;
+            /* 테두리 색 변화에 트랜지션 효과 적용 */
+            max-width: calc(100% - 340px);
+            /* 화면 전체 너비에서 왼쪽 네비게이션 바의 너비를 뺀 값 */
+            text-align: start;
+            margin-top: 15px;
+            flex: 1;
+        }
+
+        input[type="name"]:focus,
+        input[type="name"]:hover {
+            outline: 3px solid #FDBBBB;
+        }
+
+        #type {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+            background-color: #F5F5F5;
+            width: 170px;
+            height: 50px;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+            float: right;
+            margin-top: 15px;
+            margin-right: 30px;
+        }
+
+        #type:focus,
+        #type:hover {
+            outline: 3px solid #FDBBBB;
+        }
+
+        #nav {
+            background-color: rgba(253, 187, 187, 0.4);
+            width: 300px;
+            height: 100%;
+            float: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+        }
+
+        #section {
+            max-width: calc(100% - 340px);
+            /* 화면 전체 너비에서 왼쪽 네비게이션 바의 너비를 뺀 값 */
+            height: 500px;
+            text-align: start;
+            margin-right: 40px;
+            margin-top: 15px;
+            flex: 1;
+            overflow-x: auto;
+            /* 가로 스크롤 제어 */
+            overflow-y: auto;
+            /* 수직 스크롤 유지 */
+        }
+
+        #btn {
+            max-width: calc(100% - 340px);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 300px;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        @font-face {
+            font-family: 'dongle';
+            src: local('dongle'), url('/Users/parkhyejeong/Documents/font/dongle.ttf') format('ttf');
+        }
+
+        body {
+            font-family: 'dongle', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body onload="initValue('<%= text_category %>');">
+    <div
+        style="width: 100%; height: 30%; background-color: rgba(244, 244, 244, 0.5); padding-top: 10px; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+        <div style="margin-left: 10px; display: flex; align-items: center;">
+            <img src="/images/logo.png" alt="주독야독" width="50dp" height="50dp" style="margin-right: 10px;">
+            <a class="navbar-brand" href="/admin/"
+                style="text-decoration-line: none; color: black; font-size: 36px; font-weight: bold;"
+                onmouseover="this.style.color='gray';" onmouseout="this.style.color='black';">주독야독</a>
+            <span style="margin: 0 30px;"></span>
+
+            <!-- 링크 - 임시 설정 -->
+            <a class="navbar-brand" href="/admin/users"
+                style="text-decoration-line: none; color: black; font-size: 18px; font-weight: bold;"
+                onmouseover="this.style.color='gray'; this.style.textDecoration='underline'; this.style.textDecorationColor='#FDBBBB';"
+                onmouseout="this.style.color='black'; this.style.textDecoration='none';"
+                onfocus="this.style.textDecoration='underline';" onblur="this.style.textDecoration='none';">회원관리</a>
+            <span style="margin: 0 10px;"></span>
+            <a class="navbar-brand" href="/admin/text"
+                style="text-decoration-line: none; color: black; font-size: 18px; font-weight: bold; text-decoration: underline; text-decoration-color: #FDBBBB;"
+                onmouseover="this.style.color='gray'; this.style.textDecoration='none';"
+                onmouseout="this.style.color='black'; this.style.textDecoration='underline'; this.style.textDecorationColor='#FDBBBB';"
+                onfocus="this.style.textDecoration='none';" onblur="this.style.textDecoration='underline';">지문관리</a>
+            <span style="margin: 0 10px;"></span>
+            <a class="navbar-brand" href="/admin/feedback"
+                style="text-decoration-line: none; color: black; font-size: 18px; font-weight: bold;"
+                onmouseover="this.style.color='gray'; this.style.textDecoration='underline'; this.style.textDecorationColor='#FDBBBB';"
+                onmouseout="this.style.color='black'; this.style.textDecoration='none';"
+                onfocus="this.style.textDecoration='underline';" onblur="this.style.textDecoration='none';">피드백 관리</a>
+            <span style="margin: 0 10px;"></span>
+            <a class="navbar-brand" href="/admin/ai"
+                style="text-decoration-line: none; color: black; font-size: 18px; font-weight: bold;"
+                onmouseover="this.style.color='gray'; this.style.textDecoration='underline'; this.style.textDecorationColor='#FDBBBB';"
+                onmouseout="this.style.color='black'; this.style.textDecoration='none';"
+                onfocus="this.style.textDecoration='underline';" onblur="this.style.textDecoration='none';">AI 관리</a>
+            <span style="margin: 0 30px;"></span>
+        </div>
+
+        <button onclick="window.location.href = '/admin/logout';"
+            style="border-style: solid; font-size: 20px; font-weight: bold; background-color: white; border-width: 2px; border-color: black; border-radius: 30px; width: 111px; height: 45px; margin-right: 10px;"
+            onmouseover="this.style.backgroundColor='#FDBBBB'; this.style.color='black';"
+            onmouseout="this.style.backgroundColor='white'; this.style.color='black';">로그아웃</button>
+    </div>
+
+    <div id="nav">
+        <ul style="padding: 0; height: 90vh; overflow-y: auto;">
+            <% for (var i=0; i < text_list.length; i++) { %>
+                <li style="list-style-type: none; margin: 10px; padding: 30px; background-color: white; border-radius: 30px; border-color: #FDBBBB; border-width: 3px; border-style: solid;"
+                    onmouseover="this.style.backgroundColor='rgba(253, 187, 187, 0.4)';"
+                    onmouseout="this.style.backgroundColor='white';">
+                    <a style="text-decoration-line: none; color: black; font-size: 20px; font-weight: bold;"
+                        class="dropdown-item" href="/admin/text/<%= text_list[i].text_id %>">
+                        <%= text_list[i].title %>
+                    </a>
+                </li>
+                <% } %>
+
+                    <li style="list-style-type: none; margin: 10px; padding: 10px; background-color: white; border-radius: 30px; border-color: #FDBBBB; border-width: 3px; border-style: solid;"
+                        onmouseover="this.style.backgroundColor='rgba(253, 187, 187, 0.4)';"
+                        onmouseout="this.style.backgroundColor='white';">
+                        <a style="display: flex; align-items: center; justify-content: center; text-decoration-line: none; color: black; font-size: 70px; font-weight: bold;"
+                            class="dropdown-item" href="/admin/text/new">
+                            +
+                        </a>
+                    </li>
+        </ul>
+    </div>
+
+    <form action="/admin/text/new/<%= text_id %>" method="POST">
+    <input type="name" id="name" name="text_title" placeholder="지문 이름"
+        style="width: 300px; height: 30px; font-size: 20px; border-radius: 10px;" value="<%= text_title %>" required>
+
+    <select name="text_category" id="type" required>
+        <option value="경제">경제</option>
+        <option value="예술">예술</option>
+        <option value="과학">과학</option>
+        <option value="기술">기술</option>
+        <option value="사회">사회</option>
+        <option value="인문">인문</option>
+        <option value="독서 이론">독서 이론</option>
+    </select>
+
+            <div id="section">
+
+                <div style="display: flex; align-items: start; justify-content: start;">
+                    <textarea name="text_contents"
+                        style="border: none; border-radius: 10px; background-color: rgba(250, 240, 240, 1); margin-left: 20px; width: 100%; height: 450px; font-size: 20px; line-height: 1.5; padding: 7px;"
+                        onmouseover="this.style.border='3px solid #FDBBBB';"
+                        onmouseout="this.style.backgroundColor='rgba(250, 240, 240, 1)'; this.style.border='none';"
+                        onfocus="this.style.border='3px solid #FDBBBB'; this.style.outline='none';"><%= text_contents %></textarea>
+                </div>
+            </div>
+            </div>
+
+            <div id="btn">
+                <button type="submit"
+                    style="min-width: 350px; height: 40px; font-weight: bold; border-style: solid; border-radius: 30px; border-color: #FDBBBB; border-width: 3px; background-color: rgba(253, 187, 187, 0.4); font-size: 20px; color: black; margin-right: 10px;"
+                    onmouseover="this.style.backgroundColor='white'; this.style.color='#FDBBBB';"
+                    onmouseout="this.style.backgroundColor='rgba(253, 187, 187, 0.4)'; this.style.color='black';">수정</button>
+            </div>
+
+    </form>
+
+            <script>
+                function getValue() {
+                    // select box 요소 가져오기
+                    var selectBox = document.getElementById("type");
+
+                    // 선택된 옵션의 인덱스
+                    var selectedIndex = selectBox.selectedIndex;
+
+                    // 선택된 옵션의 값을 가져오기
+                    var selectedValue = selectBox.options[selectedIndex].value;
+                    return selectedValue;
+                }
+
+                function initValue(value) {
+                    // 서버에서 가져온 선택된 값
+                    var selectedValue = value; // 예시로 "과학"을 가져왔다고 가정합니다.
+
+                    // select box 요소 가져오기
+                    var selectBox = document.getElementById("type");
+
+                    // select box의 option 개수
+                    var options = selectBox.options;
+
+                    // 각 option의 값을 확인하여 선택된 값과 일치하는 option을 찾음
+                    for (var i = 0; i < options.length; i++) {
+                        if (options[i].value === selectedValue) {
+                            // 선택된 값을 가진 option을 선택함
+                            options[i].selected = true;
+                            break; // 선택 후 반복문 종료
+                        }
+                    }
+                }
+            </script>
+</body>
+
+</html>

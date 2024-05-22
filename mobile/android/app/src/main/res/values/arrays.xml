@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="choice">
+        <item>지문 유형 선택</item>
+    </string>
+
+    <string-array name="type">
+        <item>과학</item>
+        <item>기술</item>
+        <item>독서 이론</item>
+        <item>사회</item>
+        <item>예술</item>
+        <item>인문</item>
+    </string-array>
+</resources>

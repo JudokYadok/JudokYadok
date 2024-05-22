@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">nunettine</string>
+
+    <!-- 로그인 -->
+    <string name="kakao_appkey">7eb1dbf1d41470be56e2ffb3b5db5d84</string>
+    <string name="chronometer_format">HH:mm:ss</string>
+
+    <!-- 설정 -->
+    <string name="developer_info">
+        <b>AI</b>: 박민정\n\n
+        <b>Android, Web</b>: 박혜정\n\n
+        <b>Server</b>: 구연우, 김수정\n\n
+    </string>
+</resources>
