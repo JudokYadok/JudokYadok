@@ -8,20 +8,23 @@
     <title>주독야독</title>
     <style>
         #nav {
-            background-color: rgba(253, 187, 187, 0.4);
+            background-color: rgba(255, 255, 255, 0.4);
             width: 300px;
             height: 100%;
+            max-height: 100vh;
             float: left;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            overflow-y: auto;
         }
 
         #section {
             max-width: calc(100% - 340px);
             text-align: center;
             float: left;
-            margin-right: 30px;
+            margin-right: 20%;
             margin-top: 30px;
             margin-left: 20px;
         }
@@ -45,19 +48,20 @@
         }
 
         @font-face {
-            font-family: 'dongle';
-            src: local('dongle'), url('/Users/parkhyejeong/Documents/font/dongle.ttf') format('ttf');
+            font-family: 'neo';
+            src: local('neo'), url('/font/neo.ttf') format('ttf');
         }
 
         body {
             font-family: 'dongle', Arial, sans-serif;
+            overflow: scroll;
         }
     </style>
 </head>
 
 <body>
     <div
-        style="width: 100%; height: 30%; background-color: rgba(244, 244, 244, 0.5); padding-top: 10px; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+        style="width: 100%; height: 100%; background-color: rgba(244, 244, 244, 0.5); padding-top: 10px; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
         <div style="display: flex; align-items: center;">
             <img src="/images/logo.png" alt="주독야독" width="50dp" height="50dp" style="margin-right: 10px;">
             <a class="navbar-brand" href="/admin/"
@@ -114,7 +118,6 @@
         </ul>
     </div>
     <div id="feedback_box">
-    <% if(feedback_list) { %>
         <div id="section">
             <p style="font-size: 40px; font-weight: bold;"> 앱 피드백 </p>
         </div>    <div id="section">
@@ -128,9 +131,7 @@
             </div>
             <% } %>
     </div>
-    <% } %>
 
-    <% if(quizfeedback_list) { %>
         <div id="section">
             <p style="font-size: 40px; font-weight: bold;"> 퀴즈 피드백 </p>
         </div>    <div id="section">
@@ -162,7 +163,6 @@
             </div>
             <% } %>
     </div>
-    <% } %>
 </div>
 </body>
 

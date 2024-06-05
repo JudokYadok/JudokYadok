@@ -12,15 +12,15 @@
         }
 
         @font-face {
-            font-family: 'dongle';
-            src: local('dongle'), url('/Users/parkhyejeong/Documents/font/dongle.ttf') format('ttf');
+            font-family: 'neo';
+            src: local('neo'), url('/font/neo.ttf') format('ttf');
         }
 
         body {
-            font-family: 'dongle', Arial, sans-serif;
+            font-family: 'neo', !important;
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            overflow: scroll;
         }
     </style>
 </head>
@@ -69,14 +69,17 @@
     <div id="slideshow" style="width: 100%; height: fit-content; background-color: #FDBBBB;">
         <!-- 이미지 - 임시 설정 -->
         <div class="slide">
-            <img style="width: 100%; height: fit-content;" src="/images/example1.jpg">
+            <img style="width: 100%; height: fit-content;" src="/images/main1.png">
         </div>
         <div class="slide">
-            <img style="width: 100%; height: fit-content;" src="/images/example2.jpg">
+            <img style="width: 100%; height: fit-content;" src="/images/main2.png">
         </div>
-        <!-- <div class="slide">
-            <h2>세 번째 페이지</h2>
-        </div> -->
+        <div class="slide">
+            <img style="width: 100%; height: fit-content;" src="/images/main3.png">
+        </div>
+        <div class="slide">
+            <img style="width: 100%; height: fit-content;" src="/images/main4.png">
+        </div>
     </div>
 
     <script>

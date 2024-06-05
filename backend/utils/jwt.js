@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
-const secret = require('../envenv').JWT_SECRET_KEY;
-const refresh_secret = require('../envenv').REFRESH_SECRET_KEY;
+const secret = require('../config/jwtconfig').JWT_SECRET_KEY;
+const refresh_secret = require('../config/jwtconfig').REFRESH_SECRET_KEY;
 
 module.exports = {
 

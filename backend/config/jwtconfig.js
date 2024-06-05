@@ -1,0 +1,5 @@
+const JWT_SECRET_KEY = "wedf65weWRR532JihHHGjmgf";
+const REFRESH_SECRET_KEY = "EYfh6531egKUHz45g6";
+
+module.exports.JWT_SECRET_KEY = JWT_SECRET_KEY;
+module.exports.REFRESH_SECRET_KEY = REFRESH_SECRET_KEY;

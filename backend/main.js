@@ -5,7 +5,8 @@ const session = require('express-session');
 const ejs = require('ejs');
 const mysql = require('mysql');
 const child_process = require('child_process');
-const dbConfig = require('./dbconfig');
+const dbConfig = require('./config/dbconfig.js');
+const path = require('path');
 
 const app = express();
 const port = 60023;
@@ -45,9 +46,10 @@ app.use(express.urlencoded({extended: true}));
 
 // ejs 사용 설정
 app.set("view engine", "ejs");
-app.set("views", "/home/t24123/src/v0.9src/web/backend/views");
+app.set('views', path.join(__dirname, 'views'));
 
 app.use("/images", express.static(__dirname+"/public/images"));
+app.use("/font", express.static(__dirname+"/public/font"));
 
 // MySQL 연결 생성
 const connection = mysql.createConnection(dbConfig);
@@ -102,7 +104,7 @@ const swaggerOptions = {
             },
         ],
     },
-    apis: ['/home/t24123/src/v0.9src/web/backend/routes/admin/*.js', '/home/t24123/src/v0.9src/web/backend/routes/user/*.js'],  // 필요 시 배열 형식으로 파일 경로 추가
+    apis: [path.join(__dirname, '/routes/admin/*.js'), path.join(__dirname, '/routes/user/*.js')],  // 필요 시 배열 형식으로 파일 경로 추가
 }
 
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
