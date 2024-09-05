@@ -21,7 +21,6 @@ class JsonOutputParser(BaseOutputParser):
 output_parser = JsonOutputParser()
 
 llm = ChatOpenAI(
-    openai_api_key = "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",
     temperature=0.1,
     model="gpt-4-1106-preview",
     # streaming=True,
